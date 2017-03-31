@@ -10,6 +10,7 @@ import com.example.daniel.article.application.ArticleApplication;
 import com.example.daniel.article.di.ApplicationComponent;
 
 import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
 /**
  * Created by Daniel on 2017-03-31.
@@ -19,11 +20,12 @@ import butterknife.ButterKnife;
 public abstract class BaseActivity extends AppCompatActivity{
 
     private ProgressDialog mProgressDialog;
+    private Unbinder unbinder;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(getContentView());
-        ButterKnife.bind(this);
+        unbinder = ButterKnife.bind(this);
         onViewReady(savedInstanceState, getIntent());
     }
 
@@ -40,8 +42,8 @@ public abstract class BaseActivity extends AppCompatActivity{
 
     @Override
     protected void onDestroy() {
-        ButterKnife.unbind(this);
         super.onDestroy();
+        unbinder.unbind();
     }
 
     protected void showDialog(String msg){

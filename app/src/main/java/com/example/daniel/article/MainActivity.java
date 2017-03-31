@@ -18,11 +18,12 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
+
 
 public class MainActivity extends BaseActivity implements MainView{
 
-    @Bind(R.id.activity_article_list_recycler_view) protected RecyclerView articleList;
+    @BindView(R.id.activity_article_list_recycler_view) protected RecyclerView articleList;
     @Inject protected ArticlePresenter presenter;
     private ArticleAdapter articleAdapter;
 
@@ -63,7 +64,7 @@ public class MainActivity extends BaseActivity implements MainView{
 
     @Override
     protected int getContentView() {
-        return 0;
+        return R.layout.activity_main;
     }
 
     @Override
