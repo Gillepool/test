@@ -8,20 +8,7 @@
     android:orientation="vertical"
     tools:ignore="MissingPrefix,UnusedAttribute">
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/activity_article_list_sources_spinner_height"
-        android:elevation="2dp"
-        android:paddingLeft="@dimen/view_moderate_padding"
-        android:paddingRight="@dimen/view_moderate_padding"
-        android:background="@color/colorPrimaryDark">
 
-        <android.support.v7.widget.AppCompatSpinner
-            android:id="@+id/activity_article_list_sources_spinner"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:backgroundTint="@color/activity_article_list_spinner_color" />
-    </FrameLayout>
     <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
