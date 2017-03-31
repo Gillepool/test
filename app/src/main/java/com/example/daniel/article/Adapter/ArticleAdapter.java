@@ -17,7 +17,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -56,10 +56,10 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.Holder>{
 
     public class Holder extends RecyclerView.ViewHolder{
         @Inject protected Context context;
-        @Bind(R.id.layout_item_article_list_thumbnail) protected ImageView articleThumb;
-        @Bind(R.id.layout_item_article_list_title) protected TextView articleTitle;
-        @Bind(R.id.layout_item_article_list_description) protected TextView articleDesc;
-        @Bind(R.id.layout_item_article_list_date) protected TextView articleDate;
+        @BindView(R.id.layout_item_article_list_thumbnail) protected ImageView articleThumb;
+        @BindView(R.id.layout_item_article_list_title) protected TextView articleTitle;
+        @BindView(R.id.layout_item_article_list_description) protected TextView articleDesc;
+        @BindView(R.id.layout_item_article_list_date) protected TextView articleDate;
 
         public Holder(View itemItem){
             super(itemItem);
